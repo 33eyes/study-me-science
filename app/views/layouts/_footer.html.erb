@@ -1,12 +1,15 @@
 <footer class="footer">
   <small>
-    <a href="http://www.studyme.science/">StudyMe.Science</a>
+    &copy; 2017
+    <%= link_to "StudyMe.Science", root_path %>
+    | Web design & development by
+    <a href="http://www.arigu.me">arigu.me</a>
   </small>
   <nav>
     <ul>
-      <li><%= link_to "About",   about_path %></li>
-      <li><%= link_to "Contact", contact_path %></li>
-        <li><%= link_to "Help",   help_path %></li>
+      <li><%= link_to "About", about_path, class: "nav-text-link" %></li>
+      <li><%= link_to "Contact", contact_path, class: "nav-text-link" %></li>
+      <li><%= link_to "Help", help_path, class: "btn btn-lg btn-primary" %></li>
     </ul>
   </nav>
 </footer>

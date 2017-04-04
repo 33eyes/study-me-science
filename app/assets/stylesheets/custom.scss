@@ -121,6 +121,7 @@ footer {
   }
   small {
     float: left;
+    line-height: 28px;
   }
   ul {
     float: right;
@@ -128,6 +129,18 @@ footer {
     li {
       float: left;
       margin-left: 15px;
+      
+      a.nav-text-link {
+        line-height: 28px;
+      }
+      
+      a.btn, a.btn:hover {
+        padding: 4px 10px;
+        background: inherit;
+        color: $gray;
+        border-color: navy;
+        font-size: 14px;
+      }
     }
   }
 }
