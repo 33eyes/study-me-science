@@ -5,6 +5,8 @@
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
+$dark-blue: #000080;
+$light-blue: #00d6ff;
 
 /* universal */
 
@@ -56,20 +58,52 @@ p {
 
 
 /* header */
-
-#logo {
-  float: left;
-  margin-right: 10px;
+.navbar-inverse {
+    background-color: $dark-blue;
+}
+#brand {
   font-size: 1.7em;
   color: white;
-  text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
+  margin-right: 10px;
+  
+  font-size: 2.5em;
+  margin-top: 20px;
+  float: left;
+  
   &:hover {
     color: white;
     text-decoration: none;
   }
+  
+  .highlight {
+    color: $light-blue;
+  }
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  
+  img {
+    width: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.navbar-nav > li > a.btn {
+    margin-top: 40px;
+    margin-right: 14px;
+    padding: 4px 10px;
+    background: inherit;
+    border-color: #00d6ff;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
 }
 
 /* footer */

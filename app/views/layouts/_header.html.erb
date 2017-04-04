@@ -1,11 +1,14 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to "StudyMe.Science", root_path, id: "logo" %>
+    <%= link_to root_path, id: "logo" do %>
+      <%= image_tag("beaker-superperson-noBkgd.svg", alt: "StudyMe.Science logo") %>
+    <% end %>
+    <%= link_to root_path, id: "brand" do %>
+      Study<span class="highlight">Me</span>.Science
+    <% end  %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home",   root_path %></li>
-        <li><%= link_to "Help",   help_path %></li>
-        <li><%= link_to "Log in", '#' %></li>
+        <li><%= link_to "Log in", '#', class: "btn btn-lg btn-primary" %></li>
       </ul>
     </nav>
   </div>
