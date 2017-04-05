@@ -198,10 +198,14 @@ footer {
   .featured-heading {
     font-size: 1.3em;
     font-weight: bold;
+    
+    .lab-label {
+      color: $bright-blue;
+    }
   }
   
   .lab-label {
-    color: $bright-blue;
+    color: $dark-blue;
     font-weight: bold;
   }
   
@@ -221,10 +225,26 @@ footer {
   h1 {
     color: $dark-blue;
   }
+  
   .lab-smiley {
     width: 80px;
     opacity: 0.75;
   margin-bottom: 20px;
+  }
+  
+  h2 {
+    letter-spacing: normal;
+    font-weight: bold;
+    color: $bright-blue;
+    /* color: black; */
+    margin-top: 0;
+    margin-bottom: 14px;
+  }
+  
+  p {
+    line-height: 1.5em;
+    color: $gray;
+    font-size: 1em;
   }
 }
 
