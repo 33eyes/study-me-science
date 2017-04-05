@@ -7,6 +7,8 @@
 $gray-medium-light: #eaeaea;
 $dark-blue: #000080;
 $light-blue: #00d6ff;
+$light-blue-transparent: rgba(0, 214, 255, 0.05);
+$bright-blue: #0012ff;
 
 /* universal */
 
@@ -22,12 +24,22 @@ textarea {
   resize: vertical;
 }
 
-.center {
-  text-align: center;
-  h1 {
-    margin-bottom: 10px;
-  }
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
 }
+
+.text-center h1 {
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: $light-blue;
+}
+
+.btn.btn-lg {
+  padding: 4px 10px;
+}  
 
 /* typography */
 
@@ -56,13 +68,16 @@ p {
   line-height: 1.7em;
 }
 
+a, a:hover {
+  color: inherit;
+}
+
 
 /* header */
 .navbar-inverse {
     background-color: $dark-blue;
 }
 #brand {
-  font-size: 1.7em;
   color: white;
   letter-spacing: -1px;
   padding-top: 9px;
@@ -76,10 +91,6 @@ p {
   &:hover {
     color: white;
     text-decoration: none;
-  }
-  
-  .highlight {
-    color: $light-blue;
   }
 }
 
@@ -97,9 +108,8 @@ p {
 .navbar-nav > li > a.btn {
     margin-top: 40px;
     margin-right: 14px;
-    padding: 4px 10px;
     background: inherit;
-    border-color: #00d6ff;
+    border-color: $light-blue;
 }
 
 .navbar-inverse .navbar-nav > li > a {
@@ -111,6 +121,7 @@ p {
 footer {
   margin-top: 45px;
   padding-top: 5px;
+  padding-bottom: 80px;
   border-top: 1px solid $gray-medium-light;
   color: $gray-light;
   a {
@@ -135,12 +146,85 @@ footer {
       }
       
       a.btn, a.btn:hover {
-        padding: 4px 10px;
         background: inherit;
         color: $gray;
-        border-color: navy;
+        border-color: $dark-blue;
         font-size: 14px;
       }
     }
   }
 }
+
+
+/* Landing page */
+.jumbotron {
+  background-color: $light-blue-transparent;
+    
+  h1 {
+    color: black;
+  }
+  
+  h2 {
+    font-size: 2em;
+    color: $dark-blue;
+    opacity: 0.85;
+    
+    .highlight {
+      font-weight: bold;
+    }
+  }
+  
+  .btn.btn-lg.btn-primary {
+    background-color: $bright-blue;
+    border-color: $dark-blue;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+}
+
+#featured-lab {
+//  border: 1px solid $dark-blue;
+  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  padding: 14px;
+  margin-bottom: 30px;
+  font-size: 1.15em;
+  
+  div {
+    margin-bottom: 8px;
+  }
+  
+  .featured-heading {
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+  
+  .lab-label {
+    color: $bright-blue;
+    font-weight: bold;
+  }
+  
+  .btn.btn-lg.btn-primary {
+    background: inherit;
+    border-color: $dark-blue;
+    font-size: 14px;
+    margin-top: 10px;
+    color: $bright-blue;
+    font-weight: bold;
+  }
+}
+
+#descriptive-section {
+  margin-bottom: 60px;
+  
+  h1 {
+    color: $dark-blue;
+  }
+  .lab-smiley {
+    width: 80px;
+    opacity: 0.75;
+  margin-bottom: 20px;
+  }
+}
+

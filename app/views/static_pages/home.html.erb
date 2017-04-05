@@ -1,12 +1,65 @@
-<div class="center jumbotron">
-  <h1>Welcome to StudyMe.Science</h1>
-
-  <h2>
-    This is the home page.
-  </h2>
-
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+<div class="container-fluid">
+  <div class="text-center jumbotron">
+    <h1>Science is all about you</h1>
+  
+    <h2>
+      Guide, support and engage science by participating in scientific studies.
+      <br>
+      And earn some <span class="highlight">$$</span> along the way!
+    </h2>
+  
+    <%= link_to "Sign up for free", signup_path, class: "btn btn-lg btn-primary" %>
+    <%= link_to "Explore science labs", '#', class: "btn btn-lg btn-primary" %>
+  </div>
 </div>
 
-<%= link_to image_tag("rails.png", alt: "Rails logo"),
-            'http://rubyonrails.org/' %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div id="featured-lab">
+        <div class="featured-heading">
+          <span class="lab-label">Featured lab:</span> <a href="http://www.hbs.edu/behave/">Computer Lab for Experimental Research</a>
+        </div>
+        <div><span class="lab-label">Organization:</span> <a href="http://www.hbs.edu">Harvard Business School</a></div>
+        <div><span class="lab-label">Participant location:</span> Boston, MA</div>
+        <div>
+          <span class="lab-label">About the lab:</span>
+          The Computer Lab for Experimental Research (CLER) studies human behavior 
+          and decision-making by inviting participants from across the Boston area. 
+          We pay participants $15-25 per session to take part in lab-based studies 
+          that contribute to this cutting-edge research.
+        </div>
+        <div>
+          <%= link_to "Learn more", '#', class: "btn btn-lg btn-primary" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="descriptive-section">
+    <div class="row">
+      <div class="col">
+        <h1>Why participate?</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="row">
+          <div class="col-md-4 text-center">
+            <div><%= image_tag("lab-smiley-beakers.svg", alt: "StudyMe.Science logo", class: "lab-smiley") %></div>
+            <div>Be a part of the scientific process!</div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div><%= image_tag("lab-smiley-dollars.svg", alt: "StudyMe.Science logo", class: "lab-smiley") %></div>
+            <div>Earn a few extra bucks!</div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div><%= image_tag("lab-smiley-book.svg", alt: "StudyMe.Science logo", class: "lab-smiley") %></div>
+            <div>Learn and engage with your scientific community!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
