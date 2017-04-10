@@ -8,7 +8,8 @@ Rails.application.routes.draw do
 #  get '/about', to: 'static_pages#about'
   
 #  get '/contact', to: 'static_pages#contact'
-  resources :contacts
+  resources :contacts, only: :create
+  get 'contact-us', to: 'contacts#new', as: 'new_contact'
   
 #  get '/signup', to: 'users#new'
 
