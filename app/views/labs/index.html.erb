@@ -1,6 +1,34 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Labs</h1>
+<div id="labs-index-jumborton" class="text-center jumbotron page-heading">
+  <div class="container">
+    <h1>Explore science labs!</h1>
+  </div>
+</div>
+
+<div id="labs-index-list" class="container">
+  <% @labs.each do |lab| %>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="lab-card">
+          <div class="featured-heading">
+            <span class="lab-label">Lab:</span> <a href="<%= lab.lab_website %>"><%= lab.lab_name %></a>
+          </div>
+          <div><span class="lab-label">Organization:</span> <a href="<%= lab.organization_website %>"><%= lab.organization %></a></div>
+          <div><span class="lab-label">Participant location:</span> <%= lab.participant_location %></div>
+          <div>
+            <span class="lab-label">About the lab:</span>
+            <%= lab.description %>
+          </div>
+          <div>
+            <%= link_to "Learn more", lab.lab_website, class: "btn btn-lg btn-primary" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
 
 <table>
   <thead>
@@ -12,13 +40,11 @@
   <tbody>
     <% @labs.each do |lab| %>
       <tr>
-        <td><%= lab.lab_name %></td>
-        <td><%= lab.lab_website %></td>
-      </tr>
-      <tr>
-        <td><%= link_to 'Show', lab %></td>
-        <td><%= link_to 'Edit', edit_lab_path(lab) %></td>
-        <td><%= link_to 'Destroy', lab, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>| <%= lab.lab_name %></td>
+        <td>| <%= lab.lab_website %></td>
+        <td>| <%= link_to 'Show', lab %></td>
+        <td>| <%= link_to 'Edit', edit_lab_path(lab) %></td>
+        <td>| <%= link_to 'Destroy', lab, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
