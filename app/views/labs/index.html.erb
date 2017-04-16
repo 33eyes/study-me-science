@@ -12,7 +12,7 @@
       <div class="col-md-8 col-md-offset-2">
         <div class="lab-card">
           <div class="featured-heading">
-            <span class="lab-label">Lab:</span> <a href="<%= lab.lab_website %>"><%= lab.lab_name %></a>
+            <span class="lab-label"><a href="<%= lab.lab_website %>"><%= lab.lab_name %></span></a>
           </div>
           <div><span class="lab-label">Organization:</span> <a href="<%= lab.organization_website %>"><%= lab.organization %></a></div>
           <div><span class="lab-label">Participant location:</span> <%= lab.participant_location %></div>
@@ -29,27 +29,3 @@
   <% end %>
 </div>
 
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @labs.each do |lab| %>
-      <tr>
-        <td>| <%= lab.lab_name %></td>
-        <td>| <%= lab.lab_website %></td>
-        <td>| <%= link_to 'Show', lab %></td>
-        <td>| <%= link_to 'Edit', edit_lab_path(lab) %></td>
-        <td>| <%= link_to 'Destroy', lab, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Lab', new_lab_path %>
