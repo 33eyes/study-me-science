@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   
 #  get '/signup', to: 'users#new'
 
-  
+  resources :labs
 
   get '/under_construction', to: 'static_pages#under_construction'
   
